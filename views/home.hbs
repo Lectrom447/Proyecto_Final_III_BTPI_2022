@@ -1,0 +1,11 @@
+<h1>{{titulo}}</h1>
+{{#each messages}}
+    <div class="card mb-2">
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+        <p>{{this.contenido}}</p>
+        <footer class="blockquote-footer">{{this.nombre}} (<cite title="Source Title">{{this.email}}</cite>)</footer>
+        </blockquote>
+    </div>
+    </div>
+{{/each}}

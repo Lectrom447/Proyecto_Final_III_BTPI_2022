@@ -1,0 +1,85 @@
+<h1>Registro</h1>
+{{errors}}
+<form method="post">
+    <div class="row">
+        <div class="col-6">
+            <label for="first_name">Nombre:</label>
+            <input 
+                type="text" 
+                class="form-control" 
+                id="first_name"
+                name="firstName"
+                value="{{data.firstName}}"
+                required
+            >
+        </div>
+        <div class="col-6">
+            <label for="last_name">Apellido: </label>
+            <input 
+                type="text"
+                class="form-control"
+                id="last_name"
+                name="lastName"
+                value="{{data.lastName}}"
+                required 
+            >
+        </div>
+        <div class="col-4">
+            <label for="username">Nombre de Usuario: </label>
+            <input 
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                minlength="6"
+                value="{{data.username}}"
+                required
+            >
+        </div>
+        <div class="col-4">
+            <label for="born_day">Fecha de Nacimiento: </label>
+            <input 
+                type="date"
+                class="form-control"
+                id="born_day"
+                name="bornDay"
+                value="{{data.bornDay}}"
+                required
+            >
+        </div>
+        <div class="col-4">
+            <label for="email">Email: </label>
+            <input 
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                value="{{data.email}}"
+                required
+            >
+        </div>
+        <div class="col-6">
+            <label for="password1">Contraseña: </label>
+            <input 
+                type="password"
+                class="form-control"
+                id="password1"
+                name="password1"
+                required
+            >
+        </div>
+        <div class="col-6">
+            <label for="password2">Repita su Contraseña:</label>
+            <input 
+                type="password"
+                class="form-control"
+                id="password2"
+                name="password2"
+                required
+            >
+        </div>
+        <div class="col-12 mt-2">
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+        </div>
+    </div>
+</form>

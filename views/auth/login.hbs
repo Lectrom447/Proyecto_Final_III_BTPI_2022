@@ -1,0 +1,31 @@
+<h1>Login</h1>
+{{errors}}
+<form method="post">
+    <div class="row">
+        <div class="col-12">
+            <label for="username">Nombre de Usuario: </label>
+            <input 
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                minlength="6"
+                value="{{data.username}}"
+                required
+            >
+        </div>
+        <div class="col-12">
+            <label for="password1">Contraseña: </label>
+            <input 
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                required
+            >
+        </div>
+        <div class="col-12 mt-2">
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+    </div>
+</form>
