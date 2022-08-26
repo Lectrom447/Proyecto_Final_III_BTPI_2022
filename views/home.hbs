@@ -1,8 +1,20 @@
+{{!-- Se renderiza el titulo que se le pasó como contexto en express --}}
 <h1>{{titulo}}</h1>
+{{!-- 
+    each es equivalente a un for en programación, lo que hace es recorrer un listado,
+    y renderiza el código dentro de el por cada elemento del listado(el listado se le 
+    pasa como contexto por express, en este caso messages)
+
+    Es muy util para renderizar listas de elementos.
+--}}
 {{#each messages}}
     <div class="card mb-2">
     <div class="card-body">
         <blockquote class="blockquote mb-0">
+        {{!-- Se renderiza la propiedad contenido de el elemento que se está iterando en ese momento,
+            ese elemento es representado por "this", por lo tanto para acceder a cualquier propiedad de este se debe 
+            user "this.propiedad"
+         --}}
         <p>{{this.contenido}}</p>
         <footer class="blockquote-footer">{{this.nombre}} (<cite title="Source Title">{{this.email}}</cite>)</footer>
         </blockquote>

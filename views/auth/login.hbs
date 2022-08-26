@@ -5,12 +5,23 @@
         <div class="col-12">
             <label for="username">Nombre de Usuario: </label>
             <input 
+                {{!-- El tipo de dato que acepta el input  --}}
                 type="text"
+                {{!-- Las clases Css que le darán estilos al campo(Clases de Bootstrap) --}}
                 class="form-control"
+                {{!-- El ID del campo, debe ser único en el documento --}}
                 id="username"
+                {{!-- El nombre que usara BodyParser para extraer la informacion de este campo,
+                    es muy importante, si no se establece esta propiedad, bodyParser no podrá
+                    extraer la informacion de este campo.
+                 --}}
                 name="username"
+                {{!-- Se establece la extension minima de caracteres que acepta el input --}}
                 minlength="6"
+                {{!-- En caso de que exista se le establece un valor inicial al input, el mismo es pasado como contexto 
+                    por express mediante la variable data --}}
                 value="{{data.username}}"
+                {{!-- Marca el campo como requerido --}}
                 required
             >
         </div>

@@ -1,3 +1,9 @@
+{{!-- 
+    El archivo main.hbs es el que contiene todo el código HTML básico para el sitio web.
+    Este código lo compartirán todas las views, evitando así la duplicidad de código.
+
+ --}}
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -31,10 +37,15 @@
                     </li>
                 </ul>
             </div>
+            {{!-- Se renderiza el nombre dentro del objeto user pasado como contexto por express  --}}
             Bienvenido, {{user.nombre}}
         </div>
     </nav>
     <div class="container">
+        {{!-- 
+            Se renderiza la view correspondiente en este espacio, es muy importante que esta sección contenga 3 llaves 
+            de lo contrario las views no se renderizarán correctamente.
+         --}}
        {{{body}}}
     </div>
 </body>
